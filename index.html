@@ -1,56 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SVG Drawing Tool</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <div class="toolbar">
-      <div class="group">
-        <label>Tool</label>
-        <select id="tool">
-          <option value="rect">Rectangle</option>
-          <option value="circle">Circle</option>
-          <option value="line">Line</option>
-          <option value="free">Freehand</option>
-        </select>
-      </div>
-      <div class="group">
-        <label>Stroke</label>
-        <input type="color" id="strokeColor" value="#111111" />
-      </div>
-      <div class="group">
-        <label>Fill</label>
-        <input type="color" id="fillColor" value="#66ccff" />
-        <label class="inline"><input type="checkbox" id="useFill" checked /> Use fill</label>
-      </div>
-      <div class="group">
-        <label>Width</label>
-        <input type="number" id="strokeWidth" min="1" value="2" />
-      </div>
-      <div class="group">
-        <button id="undo">Undo</button>
-        <button id="redo">Redo</button>
-        <button id="clear">Clear</button>
-        <button id="download">Download SVG</button>
-      </div>
-    </div>
 
-    <div class="stage">
-      <svg id="canvas" width="100%" height="100%" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-            <path d="M 25 0 L 0 0 0 25" stroke="#e6e6e6" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect x="0" y="0" width="1000" height="700" fill="url(#grid)"/>
-        <g id="layer"></g>
-      </svg>
-    </div>
+  <div class="container">
+    <h2>SVG Drawing Tool</h2>
+    <svg id="drawingArea"></svg>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
